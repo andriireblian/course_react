@@ -7,10 +7,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     entry: './src/index.js',
-    output: {
-        filename: 'main.js',
-        path: path.resolve(__dirname, 'dist'),
-    },
     resolve: {
         modules: [path.resolve(__dirname, './src'), 'node_modules'],
         extensions: ['.js', '.jsx', '.json']
@@ -34,15 +30,13 @@ module.exports = {
         new MiniCssExtractPlugin(),
     ],
 
-
     module: {
         rules: [
             {
-                test: /\.m?js$/,
+                test: '/\\.js|\\.jsx$/',
                 exclude: /(node_modules|bower_components)/,
-                use: {
-                    loader: "babel-loader"
-                }
+                loader: "babel-loader"
+
             },
             {
                 test: /\.(scss|sass)$/,
@@ -62,5 +56,5 @@ module.exports = {
 };
 
 module.exports = process.env.NODE_ENV === 'development'
-    ? merge(common_config, dev_config)
-    : merge(common_config, prod_config);
+    ? require('./webpack.config.dev')
+    : require('./webpack.config.prod');
