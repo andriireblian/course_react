@@ -4,8 +4,9 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-
-module.exports = {
+const dev_config = require('./webpack.config.dev.js');
+const prod_config = require('./webpack.config.prod.js');
+const common_config = {
     entry: './src/index.js',
     resolve: {
         modules: [path.resolve(__dirname, './src'), 'node_modules'],
@@ -33,7 +34,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: '/\\.js|\\.jsx$/',
+                test: /\.js$/,
                 exclude: /(node_modules|bower_components)/,
                 use: {
                     loader: "babel-loader"
@@ -50,12 +51,16 @@ module.exports = {
             },
             {
                 test: /\.(png|svg|jpg|gif)$/,
-                use: ["file-loader"]
+                use: [
+                    {
+                        loader: 'file-loader',
+                    },
+                ],
             }
         ]
     }
 };
 
 module.exports = process.env.NODE_ENV === 'development'
-    ? require('./webpack.config.dev')
-    : require('./webpack.config.prod');
+    ? merge(common_config, dev_config)
+    : merge(common_config, prod_config);
