@@ -9,17 +9,17 @@ import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
 
 function App() {
     return (
-        <>
-            <Container>
-                <Row>
-                    <Col>
-                        <Header />
+        <Container>
+            <Row>
+                <Col>
+                    <Header />
+                    <ErrorBoundary>
                         <MovieSection />
-                        <Footer />
-                    </Col>
-                </Row>
-            </Container>
-        </>
+                    </ErrorBoundary>
+                    <Footer />
+                </Col>
+            </Row>
+        </Container>
     );
 }
 export default App;

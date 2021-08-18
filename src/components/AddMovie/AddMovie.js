@@ -4,11 +4,9 @@ import './AddMovie.scss';
 
 function AddMovie() {
     return (
-        <>
-            <div className="btn-container">
-                <Button variant="secondary">+ Add movie</Button>{' '}
-            </div>
-        </>
+        <div className="btn-container">
+            <Button variant="secondary">+ Add movie</Button>{' '}
+        </div>
     );
 }
 export default AddMovie;
