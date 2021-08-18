@@ -1,0 +1,49 @@
+@import "/src/styles/variables";
+
+.top-container {
+  position: relative;
+  height: 300px;
+  margin-top: 40px;
+  overflow: hidden;
+}
+
+.bg-image {
+  background-image: url("/src/assets/main_netflix.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 100px;
+  height: auto;
+
+  a {
+    display: inline-block;
+    font-size: $typesize-h5;
+    color: $pink;
+
+    span {
+      font-weight: $typeweight--bold;
+    }
+  }
+}
+
+.top-title {
+  position: absolute;
+  top: 80px;
+  height: auto;
+  margin-left: 100px;
+  text-transform: uppercase;
+  font-size: xx-large;
+  font-weight: $typeweight--light;
+  color: $white;
+}

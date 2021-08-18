@@ -1,0 +1,15 @@
+@import './variables.scss';
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
+
+body {
+  font: 400 $typesize-default $type-family-primary;
+  line-height: $leading--default;
+  background-color: $dark-grey;
+  color: $white;
+}
+
+.hide {
+  display: none;
+}
+

@@ -1,0 +1,84 @@
+@import "/src/styles/variables";
+
+.movie-list {
+
+  &__item {
+    flex: 1 1 30%;
+    margin: 0 40px 40px 0;
+    position: relative;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    &:hover > .hide {
+      display: block;
+    }
+  }
+
+  &__thumbnail {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__dots {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    background-color: $darkest-grey;
+    border-radius: 40px;
+    cursor: pointer;
+
+    &-item,
+    &-item:before,
+    &-item:after {
+      content:'';
+      position: absolute;
+      top: 10px;
+      left: 18px;
+      width: 4px;
+      height: 4px;
+      border-radius: 4px;
+      background-color: $white;
+    }
+
+    &-item:before {
+      top: 8px;
+      left: 0;
+    }
+
+    &-item:after {
+      top: 16px;
+      left: 0;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 15px;
+    color: $light;
+
+    &-title {
+      align-self: center;
+    }
+
+    &-year {
+      padding: 5px 10px;
+      border: 1px solid $light-gray;
+      border-radius: 5px;
+      font-size: $typesize-small;
+    }
+  }
+
+  &__genre {
+    color: #aaa;
+    font-size: $typesize-small;
+    margin-top: 5px;
+  }
+}

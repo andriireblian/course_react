@@ -1,0 +1,18 @@
+@import "/src/styles/variables";
+
+.btn-container {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  width: 155px;
+  height: 38px;
+
+  .btn {
+    text-transform: uppercase;
+    font-size: $typesize-h6;
+    font-weight: $typeweight--semi-bold;
+    color: $pink;
+    background-color: $light-gray;
+    border-color: $light-gray;
+  }
+}
