@@ -1,0 +1,30 @@
+@import "/src/styles/variables";
+
+
+.delete-modal {
+
+  .btn-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &__text{
+    margin-bottom: 30px;
+  }
+
+  &-content {
+    .col {
+      padding-left: 0;
+    }
+  }
+}
+.delete-movie-container {
+  padding: 0 !important;
+
+  .btn {float: right;}
+}
