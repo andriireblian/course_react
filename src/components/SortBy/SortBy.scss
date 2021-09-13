@@ -1,0 +1,24 @@
+@import "/src/styles/variables";
+
+.sort-by {
+
+  &__title {
+    display:inline-block;
+    margin-right: 20px;
+    text-transform: uppercase;
+    color: darkgrey;
+  }
+
+  &__dropdown {
+    button {
+      background-color: $darkest-grey;
+      border-color: $darkest-grey;
+      text-transform: uppercase;
+
+      &:after {
+        margin-left: 10px;
+        border-top-color: $pink;
+      }
+    }
+  }
+}
