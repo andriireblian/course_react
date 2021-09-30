@@ -6,6 +6,7 @@
     flex: 1 1 30%;
     margin: 0 40px 40px 0;
     position: relative;
+    max-width: 378px;
 
     &:nth-child(3n) {
       margin-right: 0;
@@ -18,6 +19,10 @@
   }
 
   &__thumbnail {
+    height: 567px;
+    background-image: url(../../assets/no_poster.jpeg);
+    background-position: center;
+    background-size: cover;
     img {
       width: 100%;
       height: 100%;
@@ -71,9 +76,11 @@
     justify-content: space-between;
     margin-top: 15px;
     color: $light;
+    align-items: baseline;
 
     &-title {
       align-self: center;
+      max-width: 65%;
     }
 
     &-year {
@@ -81,6 +88,7 @@
       border: 1px solid $light-gray;
       border-radius: 5px;
       font-size: $typesize-small;
+      margin-left: 5px;
     }
   }
 

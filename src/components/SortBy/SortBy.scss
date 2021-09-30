@@ -10,15 +10,10 @@
   }
 
   &__dropdown {
-    button {
-      background-color: $darkest-grey;
-      border-color: $darkest-grey;
-      text-transform: uppercase;
-
-      &:after {
-        margin-left: 10px;
-        border-top-color: $pink;
-      }
-    }
+    background-color: $darkest-grey;
+    border-color: $darkest-grey;
+    text-transform: uppercase;
+    color: $white;
+    outline: none;
   }
 }

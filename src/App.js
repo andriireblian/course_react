@@ -1,26 +1,12 @@
 import React from "react";
 import './styles/common.scss';
 import './styles/reset.scss';
-import { Container, Row, Col, Accordion } from "react-bootstrap";
-//import Header from "./components/Header/Header";
-import MovieDetails from "./components/MovieDetails/MovieDetails";
-import MovieSection from "./components/MovieSection/MovieSection";
-import Footer from "./components/Footer/Footer";
-import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
+import Home from "./pages/Home";
 
-function App() {
-    return (
-        <Container>
-            <Row>
-                <Col>
-                    <MovieDetails />
-                    <ErrorBoundary>
-                        <MovieSection />
-                    </ErrorBoundary>
-                    <Footer />
-                </Col>
-            </Row>
-        </Container>
-    );
-}
+export const App = () => {
+
+    return <Home/>;
+    // return <Movie/>;
+};
+
 export default App;

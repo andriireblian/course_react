@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import {Modal, Button, Form, Row, Col} from "react-bootstrap";
 import './AddMovie.scss';
+import {modalTypes} from "../../constants";
+import {useDispatch} from "react-redux";
+import {handleModal} from "../../store/thunks/movies";
 
 const AddMovieForm = ({ onSubmit }) => {
     const [title, setTitle] = useState("");
@@ -108,11 +111,18 @@ function AddMovieModal(props) {
 
 function AddMovie() {
     const [modalShow, setModalShow] = React.useState(false);
+    const handleModalDispatch = useDispatch();
+
+    const handleClickModal = (event) => {
+        event.preventDefault()
+        const { target: { dataset: { modal }}} = event
+        if (modal) handleModalDispatch(handleModal({name: modal}));
+    }
 
     return (
         <>
             <div className="btn-container">
-                <Button variant="secondary" variant="primary" onClick={() => setModalShow(true)}>+ Add movie</Button>{' '}
+                <Button variant="secondary" variant="primary" data-modal={modalTypes.addModal} onClick={handleClickModal}>+ Add movie</Button>{' '}
             </div>
 
             <AddMovieModal
