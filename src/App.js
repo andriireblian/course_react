@@ -1,7 +1,12 @@
 import React from "react";
-//import styles from "../styles/app.component.css";
+import './styles/common.scss';
+import './styles/reset.scss';
+import Home from "./pages/Home";
 
-function App() {
-    return <div className="test1">Hello World</div>;
-}
+export const App = () => {
+
+    return <Home/>;
+    // return <Movie/>;
+};
+
 export default App;

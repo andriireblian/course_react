@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+//Color variables
+$white: #fff;
+$black: #000;
+$light-gray: #555;
+$light: #ccc;
+$grey: #424242;
+$dark-grey: #545454;
+$darkest-grey: #232323;
+$pink: #F65261;
+$green: #7CB157;
+
+// Type size
+$typesize-h5: 22px;
+$typesize-h6: 18px;
+$typesize-default: 16px;
+$typesize-minor: 14px;
+$typesize-small: 12px;
+
+// Leading (line-height)
+$leading--1: 1;
+$leading--1-1: 1.1;
+$leading--1-15: 1.15;
+$leading--1-2: 1.2;
+$leading--1-3: 1.3;
+$leading--1-4: 1.4;
+$leading--1-5: 1.5;
+$leading--1-6: 1.6;
+$leading--default: $leading--1-5;
+$leading--1-7: 1.7;
+$leading--1-8: 1.8;
+$leading--2: 2;
+
+// Type family
+$type-family-primary: 'Montserrat', Helvetica, Arial, sans-serif;
+
+// Type weight
+$typeweight--light: 300;
+$typeweight--default: 400;
+$typeweight--semi-bold: 600;
+$typeweight--bold: 700;
+
