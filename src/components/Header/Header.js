@@ -3,6 +3,8 @@ import {Col, Container, Row} from "react-bootstrap";
 import './Header.scss';
 import AddMovie from "../AddMovie/AddMovie";
 import SearchMovie from "../SearchMovie/SearchMovie";
+import {Link} from "react-router-dom";
+
 
 function Header() {
     return (
@@ -10,11 +12,9 @@ function Header() {
             <Col>
                 <div className="top-container">
                     <div className="bg-image"></div>
-                    <div className="logo">
-                        <a href="#">
-                            <span>netflix</span>roulette
-                        </a>
-                    </div>
+                    <Link to='/' className="logo">
+                        <span>netflix</span>roulette
+                    </Link>
                     <h2 className="top-title">Find your movie</h2>
                     <AddMovie />
                     <SearchMovie />

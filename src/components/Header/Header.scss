@@ -25,15 +25,13 @@
   left: 40px;
   width: 100px;
   height: auto;
+  display: block;
+  display: inline-block;
+  font-size: $typesize-h5;
+  color: $pink;
 
-  a {
-    display: inline-block;
-    font-size: $typesize-h5;
-    color: $pink;
-
-    span {
-      font-weight: $typeweight--bold;
-    }
+  span {
+    font-weight: $typeweight--bold;
   }
 }
 

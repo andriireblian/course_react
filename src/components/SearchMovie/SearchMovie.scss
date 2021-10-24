@@ -7,10 +7,20 @@
   top: 50%;
   left: 100px;
 
+  .search {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 1000px;
+    height: 40px;
+    display: flex;
+  }
+
   input {
     background-color: $grey;
     border-color: $grey;
     font-size: $typesize-h5;
+    display: inline-block;
   }
 
   .search-btn {
@@ -19,5 +29,6 @@
     font-size: $typesize-h5;
     text-transform: uppercase;
     width: 170px;
+    height: 40px;
   }
 }
