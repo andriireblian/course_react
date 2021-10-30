@@ -1,0 +1,19 @@
+@import "/src/app/styles/variables";
+
+.sort-by {
+
+  &__title {
+    display:inline-block;
+    margin-right: 20px;
+    text-transform: uppercase;
+    color: darkgrey;
+  }
+
+  &__dropdown {
+    background-color: $darkest-grey;
+    border-color: $darkest-grey;
+    text-transform: uppercase;
+    color: $white;
+    outline: none;
+  }
+}
