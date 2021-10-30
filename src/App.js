@@ -1,15 +1,15 @@
 import React from "react";
-import PageNotFound from "./pages/404";
+import PageNotFound from "./app/pages/404";
 import {
     BrowserRouter as Router,
     Switch,
     Route,
 } from "react-router-dom";
-import './styles/common.scss';
-import './styles/reset.scss';
-import Home from "./pages/Home";
-import Movie from "./pages/Movie";
-import EmptyPage from "./pages/Empty";
+import './app/styles/common.scss';
+import './app/styles/reset.scss';
+import Home from "./app/pages/Home";
+import Movie from "./app/pages/Movie";
+import EmptyPage from "./app/pages/Empty";
 
 export const App = () => {
 

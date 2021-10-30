@@ -1,0 +1,95 @@
+@import 'variables';
+// Import Bootstrap and its default variables
+@import '../../../node_modules/bootstrap/scss/bootstrap';
+
+body {
+  font: 400 $typesize-default $type-family-primary;
+  line-height: $leading--default;
+  background-color: $dark-grey;
+  color: $white;
+}
+
+.hide {
+  opacity: 0;
+  transition: opacity 100ms ease-in-out;
+}
+
+.modal-content {
+  background-color: $darkest-grey;
+  padding: 30px;
+
+  .btn-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  label,
+  .btn {
+    text-transform: uppercase;
+    color: $pink;
+  }
+
+  .form-control,
+  .form-select {
+    background-color: $grey;
+    border-color: $grey;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: $white;
+    margin-bottom: 20px;
+
+    &::placeholder {
+      color: $white;
+    }
+  }
+
+  .btn {
+    padding: 10px 40px;
+    margin-left: 20px;
+
+    &:hover {
+      color: $white;
+    }
+
+    &:last-child {
+      margin-left: 20px;
+    }
+  }
+
+  .btn-group {
+    display: flex;
+    justify-content: flex-end;
+
+    .btn {
+      flex: 0 0 auto;
+    }
+
+  }
+
+  .btn-group > .btn:not(:last-child):not(.dropdown-toggle),
+  .btn-group > .btn-group:not(:last-child) > .btn {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+  }
+
+  .btn-group > .btn:nth-child(n+3),
+  .btn-group > :not(.btn-check) + .btn,
+  .btn-group > .btn-group:not(:first-child) > .btn {
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+  }
+
+  .btn-danger {
+    color: $white;
+  }
+}
+
+.modal-header {
+  border-bottom: none;
+  text-transform: uppercase;
+}
+
+p {
+  line-height: $leading--default;
+}

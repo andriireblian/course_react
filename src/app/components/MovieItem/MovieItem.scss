@@ -1,0 +1,126 @@
+@import "/src/app/styles/variables";
+
+.movie-list {
+
+  &__item {
+    flex: 1 1 30%;
+    margin: 0 40px 40px 0;
+    position: relative;
+    max-width: 378px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    &:hover > .hide {
+      opacity: 1;
+      transition-delay: 100ms;
+    }
+  }
+
+  &__thumbnail {
+    height: 567px;
+    background-image: url(../../assets/no_poster.jpeg);
+    background-position: center;
+    background-size: cover;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__dots {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    background-color: $darkest-grey;
+    border-radius: 40px;
+    cursor: pointer;
+
+    &-item {
+      width: 100%;
+      height: 100%;
+      color: $white;
+      font-size: xx-large;
+
+      &:hover {
+        color: $white;
+      }
+
+      span {
+        transform: rotate(90deg);
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin-left: 20px;
+        margin-top: -3px;
+      }
+    }
+
+    &-item:before {
+      top: 8px;
+      left: 0;
+    }
+
+    &-item:after {
+      margin: 0;
+      border: 0;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 15px;
+    color: $light;
+    align-items: baseline;
+
+    &-title {
+      align-self: center;
+      max-width: 65%;
+    }
+
+    &-year {
+      padding: 5px 10px;
+      border: 1px solid $light-gray;
+      border-radius: 5px;
+      font-size: $typesize-small;
+      margin-left: 5px;
+    }
+  }
+
+  &__genre {
+    color: #aaa;
+    font-size: $typesize-small;
+    margin-top: 5px;
+  }
+
+  &__dropdown-container {
+    inset: 0px auto auto -145px !important;
+    transform: translate3d(0px, -8px, 0px) !important;
+    background-color: $darkest-grey;
+    min-width: 12em;
+  }
+
+  .dropdown-item {
+    color: $white;
+    padding: 15px;
+
+    &:hover {
+      background-color: $pink;
+    }
+
+    &.close-btn {
+      width: 24px;
+      height: 24px;
+      float: right;
+      padding-top: 0px;
+      padding-right: 30px;
+      background-color: inherit;
+      margin-bottom: 8px;
+    }
+  }
+}

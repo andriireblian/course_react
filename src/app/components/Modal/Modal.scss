@@ -1,0 +1,59 @@
+@import "/src/app/styles/variables";
+
+.c-modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(#000, .8);
+  &.isOpen {
+    display: block;
+  }
+}
+
+.c-modal__title {
+  text-transform: uppercase;
+  font-size: 32px;
+}
+
+.c-modal__subtitle {
+  margin: 20px 0;
+}
+
+.c-modal__wrap {
+  position: absolute;
+  top: 0;
+  width: 500px;
+  height: auto;
+  max-height: 700px;
+  overflow-y: auto;
+  left: 50%;
+  margin: 50px 0;
+  transform: translateX(-50%);
+  background: #232323;
+  color: #fff;
+}
+
+.button-wrapper {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.c-modal__close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 26px;
+  line-height: 1;
+  background-color: $darkest-grey;
+  color: $white;
+}
+
+.c-modal__container {
+  padding: 40px;
+
+}
